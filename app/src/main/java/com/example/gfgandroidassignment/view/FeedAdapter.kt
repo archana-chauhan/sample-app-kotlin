@@ -51,12 +51,12 @@ class FeedAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder.itemViewType == LAYOUT_LARGE) {
-            (holder as FeedHolderLarge).bindItems(feedList.get(position), context)
+            (holder as FeedHolderLarge).bindItems(feedList.get(position))
             holder.tvName?.text = feedList[position].title
             holder.tvDate?.text = ((context).convertDate(feedList[position].pubDate))
         }
         else {
-            (holder as FeedHolderSmall).bindItems(feedList.get(position), context)
+            (holder as FeedHolderSmall).bindItems(feedList.get(position))
             holder.tvFname?.text = feedList[position].title
             mItemClickListener = itemClick
             holder.tvFname?.text = feedList[position].title
@@ -70,17 +70,10 @@ class FeedAdapter(
     class FeedHolderLarge(view: View) : RecyclerView.ViewHolder(view) {
         val tvName = view.tvTitle
         val tvDate = view.tvDate
-        val context: Context? = null
 
-        fun bindItems(item: Item, context: FeedActivity) {
+        fun bindItems(item: Item) {
             tvName.text=item.title
-//            tvDate.text = ((context).convertDate(item.pubDate))
-
-//            Log.d("TAG", "FeedHolderLarge tvDate.text:: " + tvDate.text)
-
         }
-
-
     }
 
     class FeedHolderSmall(view: View) : RecyclerView.ViewHolder(view) {
@@ -89,12 +82,8 @@ class FeedAdapter(
 
         val mView:View = view.parentRelative
 
-        fun bindItems(item: Item, context: FeedActivity) {
+        fun bindItems(item: Item) {
             tvFname.text=item.title
-//            tvDate2.text = ((context).convertDate(item.pubDate))
-//            Log.d("TAG", "FeedHolderSmall tvDate2.text:: " + tvDate2.text)
-
-
         }
     }
 

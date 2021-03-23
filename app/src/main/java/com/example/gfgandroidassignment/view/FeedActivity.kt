@@ -17,22 +17,18 @@ import kotlinx.android.synthetic.main.activity_feed.*
 class FeedActivity : AppCompatActivity() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     lateinit var swipeRefreshLayout: SwipeRefreshLayout
-    var number: Int = 0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
         swipeRefreshLayout = findViewById(R.id.swipe)
-
-
         linearLayoutManager = LinearLayoutManager(this@FeedActivity)
         recyclerView.layoutManager = linearLayoutManager
         recyclerView.hasFixedSize()
 
         swipeRefreshLayout.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
-            getServerData() // your code
+            getServerData()
             swipeRefreshLayout.setRefreshing(false)
         })
         getServerData()
