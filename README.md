@@ -16,7 +16,7 @@ Loading images:
 Image path is showing blank from API response. I added logs in FeedAdapter.kt file for better understanding. 
 
 Attaching the screenshots. One is using placeholder image and other one is using image path.
-
+<br/><br/><br/><br/><br/>
 
 
 
