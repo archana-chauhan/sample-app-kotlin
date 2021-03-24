@@ -1,10 +1,12 @@
 package com.example.gfgandroidassignment.view
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.gfgandroidassignment.R
 import com.example.gfgandroidassignment.interfaces.ItemClickListener
 import com.example.gfgandroidassignment.model.Item
@@ -52,18 +54,35 @@ class FeedAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder.itemViewType == LAYOUT_LARGE) {
             (holder as FeedHolderLarge).bindItems(feedList.get(position))
-            holder.tvName?.text = feedList[position].title
-            holder.tvDate?.text = ((context).convertDate(feedList[position].pubDate))
-            holder.tvTime?.text = ((context).convertTime(feedList[position].pubDate))
+            mItemClickListener = itemClick
+            holder.title?.text = feedList[position].title
+            holder.date?.text = ((context).convertDate(feedList[position].pubDate))
+            holder.time?.text = ((context).convertTime(feedList[position].pubDate))
 
+            // Image path is not in correct format. Showing blank screen
+            Log.d("FeedAdapter", "Large article image url ::  " + feedList[position].enclosure.link)
+
+            Glide.with(context)
+                    .load(feedList[position].enclosure.link)
+                    .into(holder.image)
+
+            RxView.clicks(holder.mView).subscribe {
+                mItemClickListener!!.onItemClick(position)
+            }
         }
         else {
             (holder as FeedHolderSmall).bindItems(feedList.get(position))
-            holder.tvFname?.text = feedList[position].title
             mItemClickListener = itemClick
-            holder.tvFname?.text = feedList[position].title
-            holder.tvDate2?.text = ((context).convertDate(feedList[position].pubDate))
-            holder.tvTime2?.text = ((context).convertTime(feedList[position].pubDate))
+            holder.title?.text = feedList[position].title
+            holder.date?.text = ((context).convertDate(feedList[position].pubDate))
+            holder.time?.text = ((context).convertTime(feedList[position].pubDate))
+
+            // Image path is not in correct format. Showing blank screen
+            Log.d("FeedAdapter", "Regular articles image url ::  " + feedList[position].thumbnail)
+
+            Glide.with(context)
+                    .load(feedList[position].thumbnail)
+                    .into(holder.image)
 
             RxView.clicks(holder.mView).subscribe {
                 mItemClickListener!!.onItemClick(position)
@@ -72,25 +91,25 @@ class FeedAdapter(
     }
 
     class FeedHolderLarge(view: View) : RecyclerView.ViewHolder(view) {
-        val tvName = view.tvTitle
-        val tvDate = view.tvDate
-        val tvTime = view.tvTime
-
+        val title = view.tvTitle
+        val date = view.tvDate
+        val time = view.tvTime
+        val image = view.ivImage
+        val mView:View = view.parentLayout
         fun bindItems(item: Item) {
-            tvName.text=item.title
+            title.text=item.title
         }
     }
 
     class FeedHolderSmall(view: View) : RecyclerView.ViewHolder(view) {
-        val tvFname = view.tvTitle2
-        val tvDate2 = view.tvDate2
-        val tvTime2 = view.tvTime2
-
-
+        val title = view.tvTitle2
+        val date = view.tvDate2
+        val time = view.tvTime2
+        val image = view.ivImage2
         val mView:View = view.parentRelative
 
         fun bindItems(item: Item) {
-            tvFname.text=item.title
+            title.text=item.title
         }
     }
 
