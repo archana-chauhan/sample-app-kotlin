@@ -10,7 +10,6 @@ Also, Formatting the date (yyy-mm-dd hh:mm:ss): e.g. Mar 24, 2021 09:28 AM
 
 Loading images:
   For Larger article, showing image from items/enclosure/link
-  
   For Regular articles, showing image from items/thumbnail
 
 
