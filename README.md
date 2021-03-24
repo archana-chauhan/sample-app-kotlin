@@ -9,8 +9,19 @@ Implemented Pull to refresh in order to load the articles.
 Also, Formatting the date (yyy-mm-dd hh:mm:ss): e.g. Mar 24, 2021 09:28 AM
 
 Loading images:
-  For Larger article, showing image from items/enclosure/link
-  For Regular articles, showing image from items/thumbnail
+  For Larger article, showing image from items/enclosure/link. 
+  For Regular articles, showing image from items/thumbnail.
+  
+  
+Image path is showing blank from API response. I added logs in FeedAdapter.kt file for better understanding. 
+
+Attaching the screenshots. One is using placeholder image and other one is using image path.
+
+
+
+
+
+
 
 
 
