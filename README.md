@@ -21,6 +21,8 @@ Attaching the screenshots. One is using placeholder image and other one is using
 <img align="right" src="https://user-images.githubusercontent.com/20974986/112303516-5f93d500-8cc2-11eb-8135-02d8c694b4e6.jpg" alt="Screenshot" width="350" height="700" />
 
 
+<br /> <br />
+
 Listing some image urls which is coming from API <br/>
 
 https://live-production.wcms.abc-cdn.net.au/a4a58ac67f38ecdfeeafb10b941e5b17?impolicy=wcms_crop_resize&amp;cropH=383&amp;cropW=287&amp;xPos=181&amp;yPos=0&amp;width=862&amp;height=1149
