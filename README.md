@@ -18,11 +18,10 @@ Image path is showing blank from API response. I added logs in FeedAdapter.kt fi
 Attaching the screenshots. One is using placeholder image and other one is using image path.
 
 
-![1616584075308](https://user-images.githubusercontent.com/20974986/112303463-51de4f80-8cc2-11eb-8a2b-39109c4b2305.jpg)
 
+<img src="https://user-images.githubusercontent.com/20974986/112303463-51de4f80-8cc2-11eb-8a2b-39109c4b2305.jpg" alt="Screenshot" width="350" height="700" />
 
-![1616584075317](https://user-images.githubusercontent.com/20974986/112303516-5f93d500-8cc2-11eb-8135-02d8c694b4e6.jpg)
-
+<img src="https://user-images.githubusercontent.com/20974986/112303516-5f93d500-8cc2-11eb-8135-02d8c694b4e6.jpg" alt="Screenshot" width="350" height="700" />
 
 
 
