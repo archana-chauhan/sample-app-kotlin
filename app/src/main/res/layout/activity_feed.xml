@@ -20,24 +20,13 @@
             android:layout_height="match_parent"
             android:text="GeeksForGeeks"
             android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_marginLeft="16dp"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
             android:gravity="center"
-            android:textColor="#54a060"
+            android:textColor="@color/gfg_color"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:visibility="gone"
-        android:background="@color/white"
-        app:titleTextColor="#54a060"
-        app:title="GeeksForGeeks"
-
-        />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"

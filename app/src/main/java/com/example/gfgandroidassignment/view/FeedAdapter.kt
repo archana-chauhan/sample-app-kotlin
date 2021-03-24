@@ -62,9 +62,9 @@ class FeedAdapter(
             // Image path is not in correct format. Showing blank screen
             Log.d("FeedAdapter", "Large article image url ::  " + feedList[position].enclosure.link)
 
-            Glide.with(context)
-                    .load(feedList[position].enclosure.link)
-                    .into(holder.image)
+
+            // TODO Please comment below line in order to check the image position
+            Glide.with(context).load(feedList[position].enclosure.link).into(holder.image)
 
             RxView.clicks(holder.mView).subscribe {
                 mItemClickListener!!.onItemClick(position)
@@ -80,9 +80,8 @@ class FeedAdapter(
             // Image path is not in correct format. Showing blank screen
             Log.d("FeedAdapter", "Regular articles image url ::  " + feedList[position].thumbnail)
 
-            Glide.with(context)
-                    .load(feedList[position].thumbnail)
-                    .into(holder.image)
+            // TODO Please comment below line in order to check the image position
+            Glide.with(context).load(feedList[position].thumbnail).into(holder.image)
 
             RxView.clicks(holder.mView).subscribe {
                 mItemClickListener!!.onItemClick(position)

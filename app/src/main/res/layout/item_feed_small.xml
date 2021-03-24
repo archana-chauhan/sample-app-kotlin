@@ -15,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:cardUseCompatPadding="true"
+        app:cardElevation="0dp"
         >
 
 
@@ -27,7 +28,7 @@
                 android:id="@+id/tvTitle2"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:textColor="#5c845d"
+                android:textColor="@color/gfg_color"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
