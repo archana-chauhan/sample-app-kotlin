@@ -13,10 +13,10 @@ Loading images:
   For Regular articles, showing image from items/thumbnail.
   
   
-Image path is showing blank from API response. I added logs in FeedAdapter.kt file for better understanding. 
+Image path is showing blank from API response. I added logs in FeedAdapter.kt file for better understanding. <br/><br/>
 
 Attaching the screenshots. One is using placeholder image and other one is using image path.
-<br/><br/><br/><br/><br/>
+<br/><br/><br/>
 
 
 
