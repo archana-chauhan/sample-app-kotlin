@@ -6,8 +6,8 @@ In order to match the design, I added PTSansCaption-Regular.ttf font and color '
 Implemented Pull to refresh in order to load the articles. 
 Also, Formatting the date (yyy-mm-dd hh:mm:ss): e.g. Mar 24, 2021 09:28 AM <br/>
 
-Loading images:
-  For Larger article, showing image from items/enclosure/link. 
+Loading images:<br/>
+  For Larger article, showing image from items/enclosure/link. <br/>
   For Regular articles, showing image from items/thumbnail. <br/>
   
   
