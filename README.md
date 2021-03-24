@@ -16,12 +16,12 @@ Image path is showing blank image from API response. I added logs in FeedAdapter
 Attaching the screenshots. One is using placeholder image and other one is using image path.
 <br/>
 
-<img align="left" src="https://user-images.githubusercontent.com/20974986/112303463-51de4f80-8cc2-11eb-8a2b-39109c4b2305.jpg" alt="Screenshot" width="450" height="700" />
+<img align="left" src="https://user-images.githubusercontent.com/20974986/112303463-51de4f80-8cc2-11eb-8a2b-39109c4b2305.jpg" alt="Screenshot" width="350" height="700" />
 
-<img align="right" src="https://user-images.githubusercontent.com/20974986/112303516-5f93d500-8cc2-11eb-8135-02d8c694b4e6.jpg" alt="Screenshot" width="450" height="700" />
+<img align="right" src="https://user-images.githubusercontent.com/20974986/112303516-5f93d500-8cc2-11eb-8135-02d8c694b4e6.jpg" alt="Screenshot" width="350" height="700" />
 
 
-<br /> <br />
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 Listing some image urls which is coming from API <br/>
 
