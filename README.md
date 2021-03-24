@@ -6,10 +6,13 @@ This android assignment is following MVVM architecture and developed in Kotlin. 
 In order to match the design, I added PTSansCaption-Regular.ttf font and color '#5c845d'
 
 Implemented Pull to refresh in order to load the articles.
-Formatting the date (yyy-mm-dd hh:mm:ss): e.g. Mar 24, 2021 09:28 AM
+
+Also, Formatting the date (yyy-mm-dd hh:mm:ss): e.g. Mar 24, 2021 09:28 AM
 
 Loading images:
+
   For Larger article, showing image from items/enclosure/link
+  
   For Regular articles, showing image from items/thumbnail
 
 
