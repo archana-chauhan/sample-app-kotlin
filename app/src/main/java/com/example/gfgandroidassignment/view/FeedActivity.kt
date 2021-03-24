@@ -75,30 +75,27 @@ class FeedActivity : AppCompatActivity() {
         val formatDate:Array<String> = newDate[0].split("-").toTypedArray()
         val month:String = getMonth(formatDate[1])
         val format:String = month + " " + formatDate[2] + ", " + formatDate[0]
+
+        return format
+    }
+
+
+    fun convertTime(date: String):String {
+        val newDate:Array<String> = date.split(" ").toTypedArray()
         val formatTime:Array<String> = newDate[1].split(":").toTypedArray()
         if (formatTime[0].toInt() > 12) {
             var after:String = formatTime[0].toInt().minus(12).toString()
-
-            if (after.toInt() > 9) {
-                after = after + ":" + formatTime[1] + " PM"
-                return format + " " + after
-            }
-            else {
-                after = "0" + after + ":" + formatTime[1] + " PM"
-                return format + " " + after
-            }
+            after = after + ":" + formatTime[1] + " PM"
+            return after
         }
         else {
-            if (formatTime[0].toInt() > 9) {
-                var before:String = formatTime[0] + ":" + formatTime[1] + " AM"
-                return format + " " + before
-            }
-            else {
-                var before:String = "0" + formatTime[0] + ":" + formatTime[1] + " AM"
-                return format + " " + before
-            }
+            var before:String = formatTime[0] + ":" + formatTime[1] + " AM"
+            return before
         }
-        return ""
+
+
     }
+
+
 
 }

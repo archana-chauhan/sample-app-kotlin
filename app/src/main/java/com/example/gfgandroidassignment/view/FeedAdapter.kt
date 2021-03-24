@@ -54,6 +54,8 @@ class FeedAdapter(
             (holder as FeedHolderLarge).bindItems(feedList.get(position))
             holder.tvName?.text = feedList[position].title
             holder.tvDate?.text = ((context).convertDate(feedList[position].pubDate))
+            holder.tvTime?.text = ((context).convertTime(feedList[position].pubDate))
+
         }
         else {
             (holder as FeedHolderSmall).bindItems(feedList.get(position))
@@ -61,6 +63,8 @@ class FeedAdapter(
             mItemClickListener = itemClick
             holder.tvFname?.text = feedList[position].title
             holder.tvDate2?.text = ((context).convertDate(feedList[position].pubDate))
+            holder.tvTime2?.text = ((context).convertTime(feedList[position].pubDate))
+
             RxView.clicks(holder.mView).subscribe {
                 mItemClickListener!!.onItemClick(position)
             }
@@ -70,6 +74,7 @@ class FeedAdapter(
     class FeedHolderLarge(view: View) : RecyclerView.ViewHolder(view) {
         val tvName = view.tvTitle
         val tvDate = view.tvDate
+        val tvTime = view.tvTime
 
         fun bindItems(item: Item) {
             tvName.text=item.title
@@ -79,6 +84,8 @@ class FeedAdapter(
     class FeedHolderSmall(view: View) : RecyclerView.ViewHolder(view) {
         val tvFname = view.tvTitle2
         val tvDate2 = view.tvDate2
+        val tvTime2 = view.tvTime2
+
 
         val mView:View = view.parentRelative
 

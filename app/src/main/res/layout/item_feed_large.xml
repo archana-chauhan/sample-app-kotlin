@@ -65,10 +65,26 @@
                 android:textColor="#939393"
                 android:id="@+id/tvDate"
                 android:textSize="12sp"
+                android:text=""
+                android:textStyle="bold"
                 android:layout_marginLeft="16dp"
                 android:layout_marginBottom="20dp"
                 android:layout_below="@+id/view"
-                android:fontFamily="@font/regular"
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#939393"
+                android:id="@+id/tvTime"
+                android:textSize="12sp"
+                android:text=""
+                android:layout_marginLeft="6dp"
+                android:layout_below="@+id/view"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/tvDate"
 
                 />
 
