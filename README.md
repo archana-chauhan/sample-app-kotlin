@@ -1,4 +1,4 @@
-# gfg-android-assignment
+# sample-app-kotlin
 
 This sample app is following MVVM architecture and developed in Kotlin. I've used Retrofit and RxJava for the network call. I implemented the logic for showing 2 different layouts with a single recyclerview. <br/>
 
